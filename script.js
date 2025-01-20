@@ -1,5 +1,10 @@
 let selectedCourse = 0;
 
+function editCourse(e) {
+    selectedCourse = e.target.parentElement.querySelector('.courseId').innerText;
+    showEditModal();
+}
+
 async function getCourses(){
     const data = await fetch("https://vvri.pythonanywhere.com/api/courses");
     return data.json();
@@ -16,10 +21,7 @@ async function printCourses(){
             <div class="courseName">${element.name}</div>
             <div class="courseId">${element.id}</div>
             <div>
-                <button class="editBtn" onClick="(e)=> {
-                    selectedCourse = this.parentElement.querySelector('.courseId').innerText;
-                    showEditModal();
-                    }">Szerkesztés</button>
+                <button class="editBtn" onClick="editCourse(event)">Szerkesztés</button>
                 <button class="deleteBtn" onClick="deleteCourse(this.parentElement.querySelector('.courseId').innerText)">Törlés</button>
             </div>
         </div>
@@ -47,10 +49,6 @@ async function deleteCourse(courseId){
 }
 
 const editFrom = document.querySelector("#editForm");
-
-function showEditModal(){
-    editFrom.style.display = "flex";
-}
 
 async function updateCourse(courseId){
     console.log("asd", courseId);
