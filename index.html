@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul id="nav">
+        <a href="index.html"><li class="navitem">Kurzusok</li></a>
+        <a href="tanulok.html"><li class="navitem">Tanulók</li></a>
+    </ul>
+
+    <div id="courseList">
+
+    </div>
+
+    <div id="modalContext">
+        <div id="editModal">
+            <div id="editModalContent">
+                <h2 id="editModalTitle">Kurzus szerkesztése</h2>
+                <form id="editForm">
+                    <input type="hidden" id="editId">
+                    <label for="editName">Név</label>
+                    <input type="text" id="editName" name="name">
+                    <button class="saveBtn" type="submit">Mentés</button>
+                    <button class="closeBtn">Bezárás</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
