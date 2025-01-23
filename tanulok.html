@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul id="nav">
+      <div>
+        <h2>Tanuló nyilvántartó</h2>
+      </div>
+      <div class="menuItems">
+        <a href="index.html"><li class="navitem">Kurzusok</li></a>
+        <a href="tanulok.html"><li class="navitem">Tanulók</li></a>
+      </div>
+      <button onclick="showAddModal()" id="newStudentBtn">Új tanuló</button>
+    </ul>
+
+    <div id="studentList"></div>
+
+    <div id="modalContext">
+      <div id="editModal">
+        <div id="editModalContent">
+          <h2 id="editModalTitle">Tanuló szerkesztése</h2>
+          <form id="editForm" onsubmit="updateStudent(event)">
+            <input type="hidden" id="editId" />
+            <label for="editName">Név</label>
+            <input type="text" id="editName" name="name" />
+            <button class="saveBtn" type="submit">Mentés</button>
+            <button
+              class="closeBtn"
+              type="button"
+              onclick="this.parentElement.parentElement.parentElement.style.display = 'none'"
+            >
+              Bezárás
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="addModal">
+        <div id="editModalContent">
+          <h2 id="editModalTitle">Tanuló hozzáadása</h2>
+          <form id="addForm" onsubmit="addStudent(event)">
+            <input type="hidden" id="editId" />
+            <label for="editName">Név</label>
+            <input type="text" id="editName" name="name" />
+            <button class="saveBtn" type="submit">Mentés</button>
+            <button
+              class="closeBtn"
+              type="button"
+              onclick="this.parentElement.parentElement.parentElement.style.display = 'none'"
+            >
+              Bezárás
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./student-script.js"></script>
+  </body>
+</html>

@@ -53,7 +53,7 @@ li:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-#courseList {
+#courseList, #studentList {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +61,7 @@ li:hover {
   padding: 20px;
 }
 
-.course {
+.course, .student {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -72,7 +72,7 @@ li:hover {
   width: 500px;
   border-radius: 20px;
 }
-.courseName {
+.courseName, .studentName {
   font-size: 20px;
 }
 
@@ -105,13 +105,13 @@ li:hover {
   border-radius: 20px;
 }
 
-#newCourseBtn {
+#newCourseBtn, #newStudentBtn {
   padding: 10px;
   background-color: green;
   color: white;
   border: none;
 }
-#newCourseBtn:hover {
+#newCourseBtn:hover, #newStudentBtn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
